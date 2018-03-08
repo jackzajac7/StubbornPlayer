@@ -6,20 +6,20 @@ int main()
 {
         SecretDoor game;
         char repeat='y'; 
-        int dubs=0;
-        int num_played=0;
+        int dubs=0; //# wins
+        int num_played=0; //# times played
         char guess1; 
         char guess2;
 
 
         do {
                 if(repeat != 'n' && repeat != 'N') {
-                        if(repeat == 'y' || repeat == 'Y') {
+                        if(repeat == 'y' || repeat == 'Y') { //will only play again if user enters y/Y
 
                                 game.newGame();
                                 std::cout<< "Which door do you choose? (A/B/C) ";
                                 std::cin>>guess1;
-                                if(guess1 == 'a' || guess1 == 'A') {
+                                if(guess1 == 'a' || guess1 == 'A') { //checking users answers and opening user specified door
                                         game.guessDoorA();
                                 }
                                 else if(guess1 == 'b' || guess1 == 'B') {
@@ -34,7 +34,7 @@ int main()
 
 
                                 if(game.isAopen()) {
-                                        std::cout<<"It is not behind door C."<<std::endl;
+                                        std::cout<<"It is not behind door C."<<std::endl; //checks users answer and prints a statement based off of it
                                 }
                                 else if(game.isBopen()) {
                                         std::cout<< "It is not behind door B." <<std::endl;
@@ -61,13 +61,13 @@ int main()
                                 }
 
 
-                                if(game.isWinner() == true) {
+                                if(game.isWinner() == true) { //if the user wins both # of times played and # of wins is inreased by 1
                                         std::cout<< "You won." <<std::endl;
                                         num_played++;
                                         dubs++;
                                 }
-                                else if(game.isWinner() == false) {
-                                        std::cout<< "You lose." <<std::endl;
+                                else {
+                                        std::cout<< "You lose." <<std::endl; //only # of times played increases if they lose
                                         num_played++;
                                 }
 
@@ -79,7 +79,8 @@ int main()
                         std::cin>>repeat;
                 }
                 else if(repeat == 'n' || repeat == 'N') {
-                        std::cout<< "You won "<<(dubs/num_played)*100<<"% of the time, it's time to give up!" <<std::endl;
+                        double percent=((double) dubs/(double) num_played)*100; //casting double onto integers inorder to calculate the percentage
+                        std::cout<< "You won "<<percent<<"% of the time, it's time to give up!" <<std::endl;
                         return 0;
                 }
 
