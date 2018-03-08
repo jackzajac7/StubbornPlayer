@@ -1,0 +1,16 @@
+# Door Prize game
+
+Author: Aero Zajac
+Grading Checklist:
+
+* [idk out of 20] Use of iteration is appropriate and demonstrates mastery of the programming concept
+* [idk out of 20] Use of control flow is appropriate and demonstrates mastery of the programming concept
+* [idk out of 10] Use of variables is appropriate and demonstrates mastery of the programming concept
+* [10 out of 10] The general game follows the proper procedures of: preliminary guess, door reveal, second guess, and win/loss notification
+* [10 out of 10] Game can be repeated (and behaves properly when doing so)
+* [10 out of 10] All user input is validated to make sure only possible options are provided
+* [10 out of 10] The program's output is easy to understand and follows the example provided
+* [10 out of 10] The code is easy to read with proper spacing, indentation, and other style conventions
+
+
+Notes: You never master a concept... how am I supposed to know that I've used the appropriate stuff, I mean it works but I could be completely off for all I know
